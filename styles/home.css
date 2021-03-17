@@ -1,53 +1,29 @@
+/*****In an attempt at mobile first styling, the initial styling is done for the smallest of viewports*****/
+:root {
+    --img-dimensions: 3em;
+    --med-img-dimensions: 3.8em;
+    --btn-dimensions: 2em;
+    --desktop-small-img: 4.5em;
+}
+
+/*****Generic Styles*****/
 *{
     margin: 0;
     padding: 0;
 }
 
 html, body {
-    height: 100%;
+    height: 100vh;
 }
+
+/*****Navigation Bar*****/
 
 #logo {
     position: absolute;
-    top: 0.4vh;
-    left: 0.4vh;
-}
-
-#title {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    font-family: "La Belle Aurore", cursive;
-    text-align: center;
-    font-size: 72px;
-}
-
-.newEntry {
-    font-family: "Lato Regular", sans-serif;
-    border-radius: 20px;
-    height: 44px;
-    width: 148px;
-    font-size: 16px;
-    border-style: none;
-    background: #81996dec;
-    color: white;
-    transition: all 0.2s ease;
-
-}
-
-.newEntry:hover,
-.newEntry:focus {
-    outline: none;
-    background: #81996dec;
-    transform: scale(1.07);
-    border: 2px black solid;
-}
-
-.newEntry:active {
-    background-color: #586949ec;
-    transform: scale(1.0);
+    top: 0.2em;
+    left: 0.4em;
+    height: var(--img-dimensions);
+    width: var(--img-dimensions);
 }
 
 #links {
@@ -64,17 +40,211 @@ html, body {
 
 #links li {
     text-align: center;
-    margin: 10px;
+    margin: 0.6em;
 }
 
 #links a {
     font-family: "La Belle Aurore", cursive;
     text-decoration: none;
-    font-size: 33px;
-    padding-right: 15px;
+    font-size: 1.2em;
+    padding-right: 0.5em;
     color: white;
 }
 
-#links a:hover {
+#links a:active {
     text-decoration: underline;
+}
+
+/*****Main Content*****/
+
+#title {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "La Belle Aurore", cursive;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: lowercase;
+}
+
+.newEntry {
+    font-family: "Lato Regular", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    height: var(--btn-dimensions);
+    width: var(--btn-dimensions);
+    border-radius: 2em;
+    border-style: none;
+    background: #81996dec;
+    color: white;
+    transition: all 0.2s ease-in;
+    margin-top: 0.5em;
+}
+
+.newEntry:before {
+    content: "+";
+}
+
+.newEntry:active {
+    background-color: #586949ec;
+    transform: scale(0.8);
+}
+
+.newEntry:focus {
+    outline: none;
+    background-color: #586949ec;
+
+}
+
+/*****Animations*****/
+
+.fade-in {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+.fade-in-slow {
+    animation: fadeIn ease 4s;
+    -webkit-animation: fadeIn ease 4s;
+    -moz-animation: fadeIn ease 4s;
+    -o-animation: fadeIn ease 4s;
+    -ms-animation: fadeIn ease 4s;
+}
+
+.fade-in-last {
+    animation: fadeIn ease 6s;
+    -webkit-animation: fadeIn ease 6s;
+    -moz-animation: fadeIn ease 6s;
+    -o-animation: fadeIn ease 6s;
+    -ms-animation: fadeIn ease 6s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+/*****Responsive styles*****/
+@media screen and (min-width: 375px) {
+    /* medium mobile viewports */
+
+    #logo {
+        height: var(--med-img-dimensions);
+        width: var(--med-img-dimensions);
+    }
+
+    #title {
+        font-size: 1.6em;
+    }
+
+    .newEntry {
+        height: var(--btn-dimensions);
+        width: var(--btn-dimensions);
+    }
+
+    #links li {
+        margin: 0.8em;
+    }
+
+    #links a  {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    /* most mobile viewports */
+
+    #logo {
+        top: 0.6em;
+    }
+
+    #title {
+        font-size: 1.8em;
+    }
+
+    #links li {
+        margin: 1em;
+    }
+
+    #links a {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* smaller desktop/laptop viewports */
+    
+    #logo {
+        height: var(--desktop-small-img);
+        width: var(--desktop-small-img);
+    }
+    
+    #links li {
+        margin: 1em;
+    }
+
+    #links a {
+        font-size: 2em;
+    }
+
+    #links a:hover {
+        text-decoration: underline;
+    }
+
+    #title {
+        font-size: 2.2em;
+    }
+
+    .newEntry:before {
+        content: "+  add new entry";
+    }
+
+    .newEntry:hover,
+    .newEntry:focus {
+        outline: none;
+        transform: scale(1.07);
+        border: 0.1em black solid;
+    }
+
+    .newEntry {
+        border-radius: 1.2em;
+        height: 2.8em;
+        width: 9.3em;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* large device and wide screen viewports */
+
 }
