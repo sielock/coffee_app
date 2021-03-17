@@ -41,8 +41,8 @@ html, body {
 .newEntry:focus {
     outline: none;
     background: #81996dec;
-    color: ;
     transform: scale(1.07);
+    border: 2px black solid;
 }
 
 .newEntry:active {
