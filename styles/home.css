@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#logo {
+    position: absolute;
+    top: 0.4vh;
+    left: 0.4vh;
+}
+
+#title {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: "La Belle Aurore", cursive;
+    text-align: center;
+    font-size: 72px;
+}
+
+.newEntry {
+    font-family: "Lato Regular", sans-serif;
+    border-radius: 20px;
+    height: 44px;
+    width: 148px;
+    font-size: 16px;
+    border-style: none;
+    background: #81996dec;
+    color: white;
+    transition: all 0.2s ease;
+
+}
+
+.newEntry:hover,
+.newEntry:focus {
+    outline: none;
+    background: #81996dec;
+    color: ;
+    transform: scale(1.07);
+}
+
+.newEntry:active {
+    background-color: #586949ec;
+    transform: scale(1.0);
+}
+
+#links {
+    width: 100%;
+    background-color: #665555ec;
+}
+
+#links ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+#links li {
+    text-align: center;
+    margin: 10px;
+}
+
+#links a {
+    font-family: "La Belle Aurore", cursive;
+    text-decoration: none;
+    font-size: 33px;
+    padding-right: 15px;
+    color: white;
+}
+
+#links a:hover {
+    text-decoration: underline;
+}
