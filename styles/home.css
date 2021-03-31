@@ -86,15 +86,16 @@ html, body {
     content: "+";
 }
 
-.newEntry:active {
+.newEntry:hover,
+.newEntry:focus {
     background-color: #586949ec;
-    transform: scale(0.8);
+    outline: none;
+    cursor: pointer;
 }
 
-.newEntry:focus {
-    outline: none;
-    background-color: #586949ec;
-
+.newEntry:active {
+    background-color: #4d5c40ec;
+    transform: scale(0.9);
 }
 
 /*****Animations*****/
@@ -228,14 +229,6 @@ html, body {
     .newEntry:before {
         content: "+  add new entry";
     }
-
-    .newEntry:hover,
-    .newEntry:focus {
-        outline: none;
-        transform: scale(1.07);
-        border: 0.1em black solid;
-    }
-
     .newEntry {
         border-radius: 1.2em;
         height: 2.8em;
