@@ -1,0 +1,68 @@
+#title {
+    height: 100%;
+    padding-top: 30vh;
+    text-align: center;
+    font-family: $styled-font, sans-serif;
+    background: 
+        linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+        url('../images/test-background.jpg');
+    background-size: cover;
+
+    .text-box {
+        display: block;
+        margin: 0 auto;
+        width: 35vw;
+        background-color: #000;
+        color: #fff;
+        padding: 0.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        animation: fadeIn ease 2s;
+    }
+
+    .newEntry {
+        font-family: $imported-font-2, sans-serif;
+        height: $button-dimensions;
+        width: $button-dimensions;
+        border-radius: 2rem;
+        border-style: none;
+        background-color: map-get($button-colors, 'default');
+        font-size: 2rem;
+        color: #fff;
+        margin-top: 2rem;
+        transition: all 0.2s ease-in;
+        animation: fadeIn ease 4s;
+        
+        &:before {
+            content: "+";
+        }
+
+        &:focus {
+            background-color: map-get($button-colors, 'hover');
+            outline: none;
+        }
+
+        &:active {
+            background-color: map-get($button-colors, 'active');
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+

@@ -1,0 +1,223 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  background-color: #665555;
+}
+
+.navigation .navigation-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: center;
+}
+
+.navigation .navigation-links li {
+  margin: 0.6rem;
+}
+
+.navigation .navigation-links li a {
+  font-family: "La Belle Aurore", cursive;
+  font-size: 1.3rem;
+  padding-right: 0.5rem;
+}
+
+.navigation .navigation-links li a:active {
+  text-decoration: underline;
+}
+
+#logo {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.4rem;
+  height: 3em;
+  width: 3em;
+}
+
+#title {
+  height: 100%;
+  padding-top: 30vh;
+  text-align: center;
+  font-family: "La Belle Aurore", sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url("../images/test-background.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/test-background.jpg");
+  background-size: cover;
+}
+
+#title .text-box {
+  display: block;
+  margin: 0 auto;
+  width: 35vw;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  -webkit-animation: fadeIn ease 2s;
+          animation: fadeIn ease 2s;
+}
+
+#title .newEntry {
+  font-family: "Lato Regular", sans-serif;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: #669241;
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 2rem;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-animation: fadeIn ease 4s;
+          animation: fadeIn ease 4s;
+}
+
+#title .newEntry:before {
+  content: "+";
+}
+
+#title .newEntry:focus {
+  background-color: #669241ec;
+  outline: none;
+}
+
+#title .newEntry:active {
+  background-color: #4d5c40ec;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .navigation-links li {
+    margin: 0.8rem;
+  }
+  .navigation .navigation-links li a {
+    font-size: 1.8rem;
+  }
+  #logo {
+    height: 4.5em;
+    width: 4.5em;
+  }
+  #title {
+    font-size: 1.4rem;
+  }
+  #title .text-box {
+    width: 30vw;
+  }
+  #title .newEntry {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 15rem;
+  }
+  #title .newEntry:before {
+    content: "+  add new entry";
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #logo {
+    height: 5em;
+    width: 5em;
+  }
+  .navigation .navigation-links li {
+    margin: 1rem;
+  }
+  .navigation .navigation-links li a {
+    font-size: 2rem;
+  }
+  .navigation .navigation-links li a:hover {
+    text-decoration: underline;
+  }
+  #title {
+    font-size: 1.6rem;
+  }
+  #title .newEntry {
+    width: 20rem;
+  }
+  #title .newEntry:hover, #title .newEntry:focus {
+    background-color: #669241ec;
+    cursor: pointer;
+  }
+  #title .newEntry:active {
+    background-color: #4d5c40ec;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #title {
+    font-size: 2rem;
+  }
+  #title .newEntry {
+    width: 30rem;
+  }
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: right;
+  background-color: #665555;
+  font-family: "La Belle Aurore", cursive;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

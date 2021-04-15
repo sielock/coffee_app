@@ -1,0 +1,86 @@
+@include media-medium {
+    .navigation {
+        #{&}-links {
+            & li {
+                margin: 0.8rem;
+                & a {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    #logo {
+        height: map-get($image-dimensions, 'medium');
+        width: map-get($image-dimensions, 'medium');
+    }
+
+    #title {
+        font-size: 1.4rem;
+
+        .text-box {
+            width: 30vw;
+        }
+
+        .newEntry {
+            font-size: 1.3rem;
+            height: 3rem;
+            width: 15rem;
+
+            &:before {
+                content: "+  add new entry";
+            }
+        }
+    }
+}
+
+@include media-large {
+    #logo {
+        height: map-get($image-dimensions, 'large');
+        width: map-get($image-dimensions, 'large');
+    }
+
+    .navigation {
+        #{&}-links {
+            & li {
+                margin: 1rem;
+
+                & a {
+                    font-size: 2rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    #title {
+        font-size: 1.6rem;
+        .newEntry {
+            width: 20rem;
+
+            &:hover,
+            &:focus {
+                background-color: map-get($button-colors, 'hover');
+                cursor: pointer;
+            }
+
+            &:active {
+                background-color: map-get($button-colors, 'active');
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+@include media-xlarge {
+    #title {
+        font-size: 2rem;
+
+        .newEntry {
+            width: 30rem;
+        }
+    }
+}

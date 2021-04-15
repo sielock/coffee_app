@@ -1,0 +1,37 @@
+@import './resets';
+@import './variables';
+@import './navigation';
+@import './home';
+@import './responsive';
+
+body {
+    height: 100vh;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: right;
+    background-color: $primary;
+    font-family: $styled-font, cursive;
+    color: #fff;
+}

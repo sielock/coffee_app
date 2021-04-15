@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Single Origin: Your Coffee Journal</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/coffee_app/styles/home.css">
-        <link rel="stylesheet" href="/coffee_app/styles/fonts.css">
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/fonts.css">
     </head>
+
     <body>
         <header>
-            <a href="index.html"><img src="/coffee_app/images/logo.png" alt="single origin logo" id="logo"></a>
-        
-            <nav id="links">
-                <ul>
+            <a href="index.html"><img src="./images/logo.png" alt="single origin logo" id="logo"></a>
+            <nav class="navigation">
+                <ul class="navigation-links">
                     <li><a href="#myList">my list</a></li>
                     <li><a href="#recipes">recipes</a></li>
                     <li><a href="#beans">beans</a></li>
@@ -20,12 +21,15 @@
             </nav>
         </header>
 
-        <section id="title">
-            <h1 class="fade-in">single origin</h1>
-            <p class="fade-in-slow">know your coffee</p>
-            <button class="newEntry fade-in-last"></button>
-        </section>
-
-
+        <main>
+            <section id="title">
+                <h1 class="text-box"><span class="fade-in">single origin</span></h1>
+                <p class="text-box"><span class="fade-in-slow">know your coffee</span></p>
+                <button class="newEntry fade-in-last"></button>
+            </section>
+        </main>
+        <footer>&copy; Copyright 2021</footer>
+        <script src="js/main.js"></script>
     </body>
+
 </html>
