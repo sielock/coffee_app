@@ -40,8 +40,8 @@
 
 #logo {
   position: absolute;
-  top: 0.2rem;
-  left: 0.4rem;
+  top: 7%;
+  left: 1%;
   height: 3em;
   width: 3em;
 }
@@ -76,9 +76,9 @@
   border-radius: 2rem;
   border-style: none;
   background-color: #669241;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
-  margin-top: 2rem;
+  margin-top: 3rem;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   -webkit-animation: fadeIn ease 4s;
@@ -130,6 +130,7 @@
     font-size: 1.8rem;
   }
   #logo {
+    top: 4%;
     height: 4.5em;
     width: 4.5em;
   }
@@ -151,6 +152,7 @@
 
 @media screen and (min-width: 1024px) {
   #logo {
+    top: 6%;
     height: 5em;
     width: 5em;
   }

@@ -11,6 +11,7 @@
     }
 
     #logo {
+        top: 4%;
         height: map-get($image-dimensions, 'medium');
         width: map-get($image-dimensions, 'medium');
     }
@@ -36,6 +37,7 @@
 
 @include media-large {
     #logo {
+        top: 6%;
         height: map-get($image-dimensions, 'large');
         width: map-get($image-dimensions, 'large');
     }
